@@ -189,12 +189,9 @@ DisabilityAssistance/
 ## 📞 サポート
 
 ### 技術サポート
-- **Issue**: [GitHub Issues](https://github.com/your-org/DisabilityAssistance/issues)
-- **Wiki**: [プロジェクトWiki](https://github.com/your-org/DisabilityAssistance/wiki)
+- **Issue**: [GitHub Issues](https://github.com/SilentMalachite/DisabilityAssistance/issues)
 
-### セキュリティ報告
-セキュリティ脆弱性を発見した場合は、公開のIssueではなく直接ご連絡ください：
-📧 security@your-org.com
+
 
 ## 📈 ロードマップ
 
