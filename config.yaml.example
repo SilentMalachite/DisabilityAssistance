@@ -1,0 +1,62 @@
+# 障害者サービス管理システム設定ファイル（サンプル）
+# このファイルをconfig.yamlとしてコピーし、必要に応じて編集してください
+
+# データベース設定
+database:
+  # データベースファイルのパス（環境変数 SHIEN_DB_PATH で上書き可能）
+  # 空の場合、OSごとのデフォルトパスを使用:
+  # - Windows: %APPDATA%/ShienSystem/data/shien-system.db
+  # - macOS: ~/Library/Application Support/ShienSystem/data/shien-system.db
+  # - Linux: ~/.local/share/ShienSystem/data/shien-system.db
+  path: ""
+  
+  # バックアップディレクトリ（環境変数 SHIEN_BACKUP_DIR で上書き可能）
+  # 空の場合、OSごとのデフォルトパスを使用
+  backup_dir: ""
+  
+  # 保持するバックアップファイル数
+  max_backups: 10
+
+# セキュリティ設定
+security:
+  # セッションタイムアウト（環境変数 SHIEN_SESSION_TIMEOUT で上書き可能）
+  # 形式: 24h, 30m, 1h30m など
+  session_timeout: "24h"
+  
+  # パスワードポリシー
+  password_policy:
+    # 最小パスワード長
+    min_length: 8
+    # 特殊文字必須
+    require_special: true
+    # 数字必須
+    require_numbers: true
+
+# UI設定
+ui:
+  # テーマ名
+  theme: "japanese"
+  # 言語設定
+  language: "ja"
+  # フォントサイズ（8-24の範囲）
+  font_size: 12
+
+# ログ設定
+logging:
+  # ログレベル: debug, info, warn, error
+  # 環境変数 SHIEN_LOG_LEVEL で上書き可能
+  level: "info"
+  
+  # ログファイルのパス（環境変数 SHIEN_LOG_FILE で上書き可能）
+  # 空の場合、OSごとのデフォルトパスを使用
+  file_path: ""
+
+# 環境変数による設定上書き例:
+#
+# export SHIEN_DB_PATH="/custom/path/to/database.db"
+# export SHIEN_BACKUP_DIR="/custom/backup/directory"
+# export SHIEN_SESSION_TIMEOUT="12h"
+# export SHIEN_LOG_LEVEL="debug"
+# export SHIEN_LOG_FILE="/custom/log/file.log"
+#
+# これらの環境変数が設定されている場合、設定ファイルの値よりも優先されます。
